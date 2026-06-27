@@ -1,12 +1,69 @@
-# Bizly — Sistema de Gestión
+# Bizly — Sistema Integral de Gestión Comercial
 
-Aplicación React + Vite para gestión de tienda/minimercado.  
-Módulos: Dashboard, Ventas, Inventario, Clientes, Reportes, Auditoría y Configuración.
+Bizly es una plataforma web desarrollada para apoyar la transformación digital de microempresas, emprendimientos y pequeños negocios mediante la automatización de procesos administrativos y comerciales.
+
+La aplicación permite centralizar la gestión de productos, inventario, ventas, clientes, reportes y estadísticas dentro de una única plataforma accesible desde cualquier dispositivo con conexión a internet.
+
+## Problemática
+
+Muchos pequeños negocios administran sus operaciones mediante registros manuales, hojas de cálculo o herramientas no integradas, lo que genera:
+
+* Errores en el control de inventario.
+* Pérdidas económicas.
+* Duplicidad de información.
+* Falta de trazabilidad.
+* Dificultades para la toma de decisiones.
+
+Bizly surge como una solución tecnológica que facilita la administración y el crecimiento de estos negocios.
+
+## Objetivo General
+
+Desarrollar una plataforma web integral para la gestión comercial y administrativa de microempresas, permitiendo automatizar procesos de inventario, ventas, clientes y generación de reportes.
+
+## Funcionalidades Principales
+
+* Gestión de productos.
+* Control de inventario.
+* Registro y seguimiento de ventas.
+* Administración de clientes.
+* Dashboard estadístico.
+* Generación de reportes.
+* Auditoría de cambios.
+* Configuración del sistema.
+* Gestión de usuarios y roles.
+* Alertas de inventario.
+
+## Tecnologías Utilizadas
+
+### Frontend
+
+* React
+* JavaScript
+* CSS3
+* Vite
+
+### Backend
+
+* API REST
+* Arquitectura Cliente-Servidor
+
+### Base de Datos
+
+* MySQL
+
+### Herramientas
+
+* Git
+* GitHub
+* Figma
+* Visual Studio Code
+
+---
 
 ## Requisitos
 
-- Node.js 18 o superior
-- npm 9 o superior
+* Node.js 18 o superior
+* npm 9 o superior
 
 ## Instalación
 
@@ -25,15 +82,15 @@ Abre http://localhost:5173 en el navegador.
 
 ## Scripts disponibles
 
-| Comando         | Descripción                            |
-|-----------------|----------------------------------------|
-| `npm run dev`   | Servidor de desarrollo con hot reload  |
-| `npm run build` | Build de producción en `/dist`         |
-| `npm run preview` | Previsualiza el build de producción  |
+| Comando           | Descripción                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Servidor de desarrollo con hot reload |
+| `npm run build`   | Build de producción en `/dist`        |
+| `npm run preview` | Previsualiza el build de producción   |
 
 ## Estructura del proyecto
 
-```
+```text
 bizly/
 ├── index.html
 ├── vite.config.js
@@ -50,11 +107,11 @@ bizly/
     ├── data/
     │   └── defaultState.js   # Estado inicial vacío
     ├── components/
-    │   ├── Sidebar.jsx       # Navegación lateral
-    │   ├── Modal.jsx         # Modal reutilizable
-    │   ├── Badge.jsx         # Badge de estado
-    │   ├── BarChart.jsx      # Gráfica de barras (Chart.js)
-    │   └── DoughnutChart.jsx # Gráfica donut (Chart.js)
+    │   ├── Sidebar.jsx
+    │   ├── Modal.jsx
+    │   ├── Badge.jsx
+    │   ├── BarChart.jsx
+    │   └── DoughnutChart.jsx
     └── pages/
         ├── Dashboard.jsx
         ├── Ventas.jsx
@@ -67,16 +124,44 @@ bizly/
 
 ## Datos
 
-Los datos se guardan automáticamente en `localStorage` bajo la clave `bizly-state`.  
-Para resetear todo, ejecuta en la consola del navegador:
+Los datos se guardan automáticamente en `localStorage` bajo la clave `bizly-state`.
+
+Para restablecer toda la información:
 
 ```js
 localStorage.removeItem('bizly-state')
 ```
 
-## Notas técnicas
+## Notas Técnicas
 
-- Estado global manejado con `useReducer` + Context API (sin librerías externas)
-- Gráficas con Chart.js registradas por módulo (tree-shakeable)
-- Iconos: Tabler Icons via CDN (sin instalación)
-- Sin dependencias de routing — navegación por estado interno
+* Estado global manejado con `useReducer` + Context API.
+* Persistencia local mediante `localStorage`.
+* Gráficas implementadas con Chart.js.
+* Iconos mediante Tabler Icons.
+* Navegación basada en estado interno.
+* Arquitectura modular orientada a componentes.
+
+## Metodología de Desarrollo
+
+El proyecto fue desarrollado utilizando la metodología ágil Scrum, organizada en los siguientes sprints:
+
+1. Levantamiento de requisitos.
+2. Diseño UI/UX.
+3. Gestión de usuarios.
+4. Inventario.
+5. Ventas.
+6. Dashboard.
+7. Reportes.
+8. Pruebas e integración.
+
+## Equipo de Desarrollo
+
+* Hainer Alfredo Castellanos Martínez — Líder de Proyecto.
+* Andrés Felipe Díaz Afanador — Diseñador UI/UX.
+* Cristian David Ballén Contreras — Documentador y Tester.
+* Jhoan Sebastián Agudelo Rodríguez — Desarrollador Backend.
+
+## Licencia
+
+Proyecto desarrollado como parte del programa de formación Análisis y Desarrollo de Software (ADSO) del Servicio Nacional de Aprendizaje (SENA).
+
